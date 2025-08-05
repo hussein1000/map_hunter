@@ -224,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= 23) {
             permissionsAPI();
         }
-        final FloatingActionButton maps = findViewById(R.id.maps);
+
         maps.setOnClickListener(v -> {
             Display display = getWindowManager().getDefaultDisplay();
             Point size = new Point();
