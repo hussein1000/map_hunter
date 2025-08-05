@@ -225,9 +225,9 @@ public class MapHunterWebViewClient extends WebViewClient {
     @Override
     public void onPageFinished(WebView view, String url) {
         Helper.recordLocationFromUrl(activity,  url);
-        if (url.contains(Helper.gribrouillon) ){
+/*        if (url.contains(Helper.gribrouillon) ){
             Helper.injectCSS(activity, view, "css/gribouillon.css");
-        }
+        }*/
 
         ((MainActivity)activity).hideProgressDialog();
     }
