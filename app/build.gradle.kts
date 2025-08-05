@@ -8,9 +8,9 @@ android {
 
     defaultConfig {
         applicationId = "com.map.hunter"
-        minSdk = "23"
-        targetSdk = "36"
-        versionCode = "1"
+        minSdk = 23
+        targetSdk = 36
+        versionCode = 1
         versionName = "1.0"
         vectorDrawables {
             useSupportLibrary = true
@@ -38,8 +38,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     lint {
@@ -52,14 +52,16 @@ android {
 repositories {
     google()
     mavenCentral()
-    maven { url "https://jitpack.io" }
+    maven {
+        url = uri("https://jitpack.io")
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation 'androidx.browser:browser:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'commons-io:commons-io:2.6'
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation("androidx.appcompat:appcompat:1.3.1")
+    implementation("androidx.browser:browser:1.3.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.1")
+    implementation("com.google.android.material:material:1.4.0")
+    implementation("commons-io:commons-io:2.6")
 }
