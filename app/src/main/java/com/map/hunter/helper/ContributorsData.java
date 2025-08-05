@@ -17,71 +17,19 @@ public class ContributorsData {
         //itinerary
         Contributor contributor = new Contributor();
         contributor.setHasTitle(true);
-        contributor.setMain_title(context.getString(R.string.trips));
-        contributor.setTitle(context.getString(R.string.itinerary));
+        contributor.setMain_title("Developer Profile");
+        contributor.setTitle("Developer Profile");
         contributor.setProject("OpenRouteService");
-        contributor.setMap_url("https://maps.openrouteservice.org");
-        contributor.setSource_code("https://github.com/GIScience/openrouteservice-app/");
-        contributor.setMaintainer("Heidelberg Institute for Geoinformation Technology (HeiGIT)");
-        contributor.setDonations("https://openrouteservice.org/donations/");
+        contributor.setMap_url("https://github.com/hussein1000");
         contributors.add(contributor);
         //cycle_paths
         contributor = new Contributor();
         contributor.setHasTitle(false);
-        contributor.setMain_title(context.getString(R.string.trips));
-        contributor.setTitle(context.getString(R.string.cycle_paths));
+        contributor.setMain_title("Source Code");
+        contributor.setTitle("Source Code");
         contributor.setProject("CyclOSM");
-        contributor.setMap_url("https://www.cyclosm.org/");
-        contributor.setSource_code("https://github.com/cyclosm/cyclosm-cartocss-style/");
-        contributor.setMaintainer("Phyks");
-        contributor.setDonations(context.getString(R.string.not_yet));
+        contributor.setMap_url("https://github.com/hussein1000/map_hunter");
         contributors.add(contributor);
-        //topographic
-        contributor = new Contributor();
-        contributor.setHasTitle(false);
-        contributor.setMain_title(context.getString(R.string.trips));
-        contributor.setTitle(context.getString(R.string.topographic));
-        contributor.setProject("OpenTopoMap");
-        contributor.setMap_url("https://opentopomap.org");
-        contributor.setSource_code("https://github.com/der-stefan/OpenTopoMap");
-        contributor.setMaintainer("Stefan Erhardt, Philipp Hochreuther and Martin Schütz");
-        contributor.setDonations(context.getString(R.string.not_yet));
-        contributors.add(contributor);
-        //free_parkings
-        contributor = new Contributor();
-        contributor.setHasTitle(false);
-        contributor.setMain_title(context.getString(R.string.trips));
-        contributor.setTitle(context.getString(R.string.free_parkings));
-        contributor.setProject("FreeParking");
-        contributor.setMap_url("http://www.freeparking.world");
-        contributor.setSource_code(context.getString(R.string.unknown));
-        contributor.setMaintainer("Geoveolo.fr");
-        contributor.setDonations(context.getString(R.string.not_yet));
-        contributors.add(contributor);
-        //fuel
-        contributor = new Contributor();
-        contributor.setHasTitle(false);
-        contributor.setMain_title(context.getString(R.string.trips));
-        contributor.setTitle(context.getString(R.string.fuel));
-        contributor.setProject("OpenFuelMap");
-        contributor.setMap_url("https://openfuelmap.net/");
-        contributor.setSource_code("https://framagit.org/PanierAvide/OpenFuelMap");
-        contributor.setMaintainer("Adrien Pavie");
-        contributor.setDonations("https://liberapay.com/PanierAvide");
-        contributors.add(contributor);
-        //fuel
-        contributor = new Contributor();
-        contributor.setHasTitle(false);
-        contributor.setMain_title(context.getString(R.string.trips));
-        contributor.setTitle(context.getString(R.string.transit));
-        contributor.setProject("TRAVIC");
-        contributor.setMap_url("https://tracker.geops.ch/");
-        contributor.setSource_code("https://github.com/lossyrob/TRAVIC");
-        contributor.setMaintainer("Geops");
-        contributor.setDonations(context.getString(R.string.not_yet));
-        contributors.add(contributor);
-
-
 
         //-----> life_skills
         //vegetarian_restaurants
