@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        if( lastVisited.contains(Helper.solar_map)){
+/*        if( lastVisited.contains(Helper.solar_map)){
             if( params.size() > 0 ) {
                 mapTo_Load = Helper.solar_map + "/#"+zoom+"/" + params.get(1) + "/" + params.get(0);
             }
@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
             if (params.size() > 0) {
                 url = Helper.gribrouillon + "/#"+zoom+"/" + params.get(1) + "/" + params.get(0);
             }
-        }
+        }*/
         String title = Helper.getTitle(MainActivity.this, lastVisited);
         setTitle(title);
         if( mapTo_Load != null ) {
@@ -201,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        List<PowerMenuItem> distances = new ArrayList<>();
+/*        List<PowerMenuItem> distances = new ArrayList<>();
         distances.add(new PowerMenuItem(getString(R.string.about), true));
         powerMenu = new PowerMenu.Builder(MainActivity.this)
                 .addItemList(distances)
@@ -216,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
                 .setMenuColor(Color.WHITE)
                 .setSelectedMenuColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimary))
                 .setOnMenuItemClickListener(onMenuItemClickListener)
-                .build();
+                .build();*/
 
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
