@@ -66,8 +66,4 @@ public class AboutActivity  extends AppCompatActivity {
         newBase = LocaleChanger.configureBaseContext(newBase);
         super.attachBaseContext(newBase);
     }
-
-
-
-
 }
