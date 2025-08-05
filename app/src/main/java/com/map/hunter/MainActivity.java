@@ -371,7 +371,7 @@ public class MainActivity extends AppCompatActivity {
                     distances.add(new PowerMenuItem(getString(R.string.benmaps), false));
                     distances.add(new PowerMenuItem(getString(R.string.transit), false));
                     powerSubMenu = new PowerMenu.Builder(MainActivity.this)
-                        .setHeaderView("About")
+                        .setHeaderView(R.layout.layout_dialog_header_trips)
                         .setFooterView(R.layout.layout_dialog_footer)
                         .addItemList(distances)
                         .setAnimation(MenuAnimation.SHOW_UP_CENTER)

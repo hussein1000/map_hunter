@@ -12,7 +12,7 @@ import android.widget.FrameLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import com.map.hunter.MainActivity;
 
-public class OpenMapsWebChromeClient extends WebChromeClient implements MediaPlayer.OnCompletionListener, MediaPlayer.OnErrorListener {
+public class MapHunterWebChromeClient extends WebChromeClient implements MediaPlayer.OnCompletionListener, MediaPlayer.OnErrorListener {
 
     private FrameLayout videoViewContainer;
     private CustomViewCallback videoViewCallback;
@@ -30,7 +30,7 @@ public class OpenMapsWebChromeClient extends WebChromeClient implements MediaPla
         void toggledFullscreen(boolean fullscreen);
     }
 
-    public OpenMapsWebChromeClient(Activity activity, WebView webView, FrameLayout activityNonVideoView, ViewGroup activityVideoView) {
+    public MapHunterWebChromeClient(Activity activity, WebView webView, FrameLayout activityNonVideoView, ViewGroup activityVideoView) {
         this.activity = activity;
         this.isVideoFullscreen = false;
         this.webView = webView;

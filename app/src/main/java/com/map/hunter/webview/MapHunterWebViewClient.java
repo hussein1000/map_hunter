@@ -34,12 +34,12 @@ import com.map.hunter.R;
 import com.map.hunter.helper.Helper;
 import static android.content.Context.MODE_PRIVATE;
 
-public class OpenMapsWebViewClient extends WebViewClient {
+public class MapHunterWebViewClient extends WebViewClient {
 
     private final Activity activity;
     private final CoordinatorLayout rootView;
 
-    public OpenMapsWebViewClient(Activity activity){
+    public MapHunterWebViewClient(Activity activity){
         this.activity = activity;
         rootView = activity.findViewById(R.id.main_layout);
     }
