@@ -92,9 +92,9 @@ public class Helper {
     public static String getTitle(Context context, String url) {
         String title = context.getString(R.string.app_name);
         if( url.contains(Helper.direction_map)){
-            title = context.getString("Developer Profile");
+            title = context.getString(R.string.itinerary);
         }else if( url.contains(Helper.cyclo_map)){
-            title = context.getString("Source Code");
+            title = context.getString(R.string.cycle_paths);
         }
         return title;
     }
