@@ -1,18 +1,4 @@
 package com.map.hunter;
-/* Copyright 2019 Thomas Schneider
- *
- * This file is a part of OpenMultiMaps
- *
- * This program is free software; you can redistribute it and/or modify it under the terms of the
- * GNU General Public License as published by the Free Software Foundation; either version 3 of the
- * License, or (at your option) any later version.
- *
- * OpenMultiMaps is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
- * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
- * Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with OpenMultiMaps; if not,
- * see <http://www.gnu.org/licenses>. */
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -37,7 +23,6 @@ import java.util.List;
 
 
 import com.map.hunter.databinding.ActivityAboutBinding;
-import com.map.hunter.helper.ContributorsData;
 
 
 public class AboutActivity  extends AppCompatActivity {
@@ -62,15 +47,6 @@ public class AboutActivity  extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
-        //Developer click for Mastodon account
-        SpannableString content = new SpannableString(binding.developerMastodon.getText().toString());
-        content.setSpan(new ForegroundColorSpan(ContextCompat.getColor(AboutActivity.this,R.color.colorAccent)), 0, content.length(), 0);
-        binding.developerMastodon.setText(content);
-        binding.developerMastodon.setOnClickListener(v -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://framapiaf.org/@fedilab"));
-            startActivity(browserIntent);
-        });
-
 
 
         //Developer Github
@@ -78,66 +54,9 @@ public class AboutActivity  extends AppCompatActivity {
         content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
         binding.github.setText(content);
         binding.github.setOnClickListener(v -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/stom79"));
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/hussein1000/map_hunter"));
             startActivity(browserIntent);
         });
-
-        //Developer Framagit
-
-        content = new SpannableString(binding.framagit.getText().toString());
-        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
-        binding.framagit.setText(content);
-        binding.framagit.setOnClickListener(v -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://framagit.org/tom79"));
-            startActivity(browserIntent);
-        });
-
-        //Developer Codeberg
-        content = new SpannableString(binding.codeberg.getText().toString());
-        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
-        binding.codeberg.setText(content);
-        binding.codeberg.setOnClickListener(v -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://codeberg.org/tom79"));
-            startActivity(browserIntent);
-        });
-
-        //Developer donation
-        content = new SpannableString(binding.developerDonation.getText().toString());
-        content.setSpan(new ForegroundColorSpan(ContextCompat.getColor(AboutActivity.this,R.color.colorAccent)), 0, content.length(), 0);
-        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
-        binding.developerDonation.setText(content);
-        binding.developerDonation.setOnClickListener(v -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://fedilab.app/page/donations/"));
-            startActivity(browserIntent);
-        });
-
-
-        //Idea click for Mastodon account
-        content = new SpannableString(binding.bristow69Mastodon.getText().toString());
-        content.setSpan(new ForegroundColorSpan(ContextCompat.getColor(AboutActivity.this,R.color.colorAccent)), 0, content.length(), 0);
-        binding.bristow69Mastodon.setText(content);
-        binding.bristow69Mastodon.setOnClickListener(v -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://framapiaf.org/@Bristow_69"));
-            startActivity(browserIntent);
-        });
-
-        content = new SpannableString(binding.license.getText().toString());
-        content.setSpan(new ForegroundColorSpan(ContextCompat.getColor(AboutActivity.this,R.color.colorAccent)), 0, content.length(), 0);
-        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
-        binding.license.setText(content);
-        binding.license.setOnClickListener(v -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.gnu.org/licenses/quick-guide-gplv3.fr.html"));
-            startActivity(browserIntent);
-        });
-
-
-
-        List<Contributor> contributors = ContributorsData.getContributions(AboutActivity.this);
-        binding.listOfContributors.setLayoutManager(new LinearLayoutManager(AboutActivity.this));
-        binding.listOfContributors.setNestedScrollingEnabled(false);
-    }
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
