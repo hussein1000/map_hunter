@@ -55,8 +55,8 @@
                         android:orientation="vertical"
                         tools:ignore="UseCompoundDrawables">
                         <ImageView
-                            android:layout_width="108dp"
-                            android:layout_height="108dp"
+                            android:layout_width="256dp"
+                            android:layout_height="256dp"
                             android:src="@drawable/dev_avatar"
                             tools:ignore="ContentDescription" />
                     </LinearLayout>
@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="About the app"
+                android:text="Source Code"
                 />
 
             <LinearLayout
@@ -77,12 +77,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/source_code"
-                    />
                 <TextView
                     android:layout_marginStart="5dp"
                     android:id="@+id/source_code"
