@@ -1,30 +1,11 @@
 package com.map.hunter;
-/* Copyright 2019 Thomas Schneider
- *
- * This file is a part of OpenMultiMaps
- *
- * This program is free software; you can redistribute it and/or modify it under the terms of the
- * GNU General Public License as published by the Free Software Foundation; either version 3 of the
- * License, or (at your option) any later version.
- *
- * OpenMultiMaps is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
- * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
- * Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with OpenMultiMaps; if not,
- * see <http://www.gnu.org/licenses>. */
-
 import android.app.Application;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-
 import androidx.annotation.NonNull;
-
 import com.franmontiel.localechanger.LocaleChanger;
 import java.util.Locale;
-
 import com.map.hunter.helper.Helper;
-
 import static com.map.hunter.helper.Helper.SUPPORTED_LOCALES;
 
 public class MainApplication extends Application {
@@ -52,10 +33,3 @@ public class MainApplication extends Application {
         } catch (Exception ignored) { }
 
     }
-
-    @Override
-    public void onConfigurationChanged(@NonNull Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        LocaleChanger.onConfigurationChanged();
-    }
-}

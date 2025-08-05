@@ -6,20 +6,5 @@
     android:layout_height="match_parent"
     android:id="@+id/main_layout"
     tools:context=".MainActivity">
-
-
     <include layout="@layout/content_main" android:id="@+id/content_main" />
-
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/maps"
-        app:backgroundTint="@color/colorAccent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        app:tint="@color/white"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/ic_map_black_white"
-        android:contentDescription="@string/open_menu" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
