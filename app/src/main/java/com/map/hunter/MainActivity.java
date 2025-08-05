@@ -47,9 +47,9 @@ import com.map.hunter.webview.MapHunterWebViewClient;
 public class MainActivity extends AppCompatActivity {
 
 
-    private PowerMenu powerMenu;
+/*    private PowerMenu powerMenu;
     private PowerMenu powerSubMenu;
-    private PowerMenu powerMenuLanguage;
+    private PowerMenu powerMenuLanguage;*/
     final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
     public static String TAG = "MapHunterTAG";
     private String url = null;

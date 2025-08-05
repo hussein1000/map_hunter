@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import com.franmontiel.localechanger.LocaleChanger;
 import java.util.Locale;
 import com.map.hunter.helper.Helper;
-import static com.map.hunter.helper.Helper.SUPPORTED_LOCALES;
+//import static com.map.hunter.helper.Helper.SUPPORTED_LOCALES;
 
 public class MainApplication extends Application {
 
@@ -14,7 +14,7 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        try {
+/*        try {
             SharedPreferences sharedpreferences = getSharedPreferences(Helper.APP_SHARED_PREF, android.content.Context.MODE_PRIVATE);
             String defaultLocaleString = sharedpreferences.getString(Helper.SET_DEFAULT_LOCALE_NEW, null);
             if (defaultLocaleString != null) {
@@ -30,7 +30,7 @@ public class MainApplication extends Application {
                 SUPPORTED_LOCALES.add(Locale.getDefault());
             }
             LocaleChanger.initialize(getApplicationContext(), SUPPORTED_LOCALES);
-        } catch (Exception ignored) { }
+        } catch (Exception ignored) { }*/
 
     }
 

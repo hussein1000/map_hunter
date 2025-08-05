@@ -57,7 +57,7 @@ public class MapHunterWebViewClient extends WebViewClient {
             ByteArrayInputStream nothing = new ByteArrayInputStream("".getBytes());
             return new WebResourceResponse("text/javascript", "utf-8", nothing);
         }
-        else if(url.contains(Helper.hydrant_contrib_map) && url.endsWith(".js") ){
+/*        else if(url.contains(Helper.hydrant_contrib_map) && url.endsWith(".js") ){
             try {
                 URL url_ = new URL(url);
                 URLConnection connection = url_.openConnection();
@@ -129,7 +129,7 @@ public class MapHunterWebViewClient extends WebViewClient {
                 e.printStackTrace();
             }
             return new WebResourceResponse("text/javascript", "utf-8", commonJS);
-        }
+        }*/
         else{
             return super.shouldInterceptRequest(view, url);
         }

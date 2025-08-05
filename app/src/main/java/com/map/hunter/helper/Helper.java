@@ -83,13 +83,13 @@ public class Helper {
             }else {
                 Matcher matcher = pattern1.matcher(url);
                 if( matcher.find()) {
-                    if( url.contains(historic_map)){
+/*                    if( url.contains(historic_map)){
                         lat = matcher.group(5);
                         lon = matcher.group(3);
-                    }else{
-                        lat = matcher.group(3);
-                        lon = matcher.group(5);
-                    }
+                    }else{*/
+                    lat = matcher.group(3);
+                    lon = matcher.group(5);
+//                    }
                     zoom = matcher.group(2);
                 }else{
                     matcher = pattern2.matcher(url);
