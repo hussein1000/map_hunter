@@ -20,7 +20,8 @@
             android:label="Map Hunter"
             android:windowSoftInputMode="adjustPan"
             android:configChanges="orientation|screenSize|layoutDirection|locale"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
