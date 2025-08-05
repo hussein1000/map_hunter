@@ -32,17 +32,12 @@ public class AboutActivity  extends AppCompatActivity {
         ActivityAboutBinding binding = ActivityAboutBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
-
-        try {
-            PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-            String version = pInfo.versionName;
-        } catch (PackageManager.NameNotFoundException ignored) {}
-
         setTitle(R.string.about_the_app);
         if( getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -56,7 +51,6 @@ public class AboutActivity  extends AppCompatActivity {
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        LocaleChanger.onConfigurationChanged();
     }
 
     @Override
