@@ -225,19 +225,9 @@ public class MainActivity extends AppCompatActivity {
             permissionsAPI();
         }
 
-        maps.setOnClickListener(v -> {
-            Display display = getWindowManager().getDefaultDisplay();
-            Point size = new Point();
-            display.getSize(size);
-            int width = size.x;
-            int w = powerMenu.getContentViewWidth();
-            int h = powerMenu.getContentViewHeight();
-            powerMenu.showAtLocation(maps,width-w, size.y-h);
-        });
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+/*        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             WebView.setWebContentsDebuggingEnabled(true);
-        }
+        }*/
 
         if( getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
