@@ -24,9 +24,9 @@ import java.util.List;
 
 
 import com.map.hunter.databinding.ActivityAboutBinding;
-import com.map.hunter.drawer.ContributorsDrawer;
+/*import com.map.hunter.drawer.ContributorsDrawer;
 import com.map.hunter.entity.Contributor;
-import com.map.hunter.helper.ContributorsData;
+import com.map.hunter.helper.ContributorsData;*/
 
 
 public class AboutActivity  extends AppCompatActivity {

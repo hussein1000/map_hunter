@@ -1,19 +1,4 @@
 package com.map.hunter;
-/* Copyright 2019 Thomas Schneider
- *
- * This file is a part of OpenMultiMaps
- *
- * This program is free software; you can redistribute it and/or modify it under the terms of the
- * GNU General Public License as published by the Free Software Foundation; either version 3 of the
- * License, or (at your option) any later version.
- *
- * OpenMultiMaps is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
- * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
- * Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along with OpenMultiMaps; if not,
- * see <http://www.gnu.org/licenses>. */
-
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -29,19 +14,16 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
-
 import com.franmontiel.localechanger.LocaleChanger;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.skydoves.powermenu.MenuAnimation;
 import com.skydoves.powermenu.OnMenuItemClickListener;
 import com.skydoves.powermenu.PowerMenu;
 import com.skydoves.powermenu.PowerMenuItem;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-
 import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.view.Display;
@@ -52,13 +34,11 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-
 import com.map.hunter.databinding.ActivityMainBinding;
 import com.map.hunter.helper.Helper;
 import com.map.hunter.webview.MapHunterWebChromeClient;
