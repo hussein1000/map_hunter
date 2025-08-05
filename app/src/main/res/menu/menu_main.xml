@@ -1,13 +1,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.map.hunter.MainActivity">
+    tools:context="app.fedilab.openmaps.MainActivity">
     <item
         android:id="@+id/action_favorit"
         android:orderInCategory="100"
         android:icon="@drawable/ic_baseline_add_24"
         android:title="@string/action_add_favorites"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_language"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_translate"
+        android:title="@string/action_language"
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_about"
         android:orderInCategory="100"
