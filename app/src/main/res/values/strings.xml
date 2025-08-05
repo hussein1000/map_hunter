@@ -1,0 +1,78 @@
+<resources>
+    <string name="action_settings">Settings</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="access_needed">The app needs access to %1$s</string>
+    <string name="show_location">show Location</string>
+    <string name="permission_denied">Unfortunately, the permission has been denied</string>
+    <string name="all_granted">All needed permissions are granted!</string>
+    <string name="loading_wait">Loading</string>
+    <string name="reload">Reload</string>
+    <string name="error">Error: %1$s</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="enable_data">Connect to Network</string>
+    <string name="deplacements">Displacements</string>
+    <string name="close">Close</string>
+
+    <string name="trips">Trips</string>
+    <string name="life_skills">Life-skills</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="regional_maps">Regional maps</string>
+    <string name="contributions">Contributions</string>
+    <string name="itinerary">Itinerary</string>
+    <string name="cycle_paths">Cycle paths</string>
+    <string name="topographic">Topographic</string>
+    <string name="free_parkings">Free parkings</string>
+    <string name="fuel">Fuel</string>
+    <string name="railway">Railway</string>
+    <string name="benmaps" translatable="false">Ben Maps</string>
+    <string name="transit">Transit</string>
+    <string name="vegetarian_restaurants">Vegetarian restaurants</string>
+    <string name="accessible_places">Wheelchair Accessible Places</string>
+    <string name="beer">Beer</string>
+    <string name="solar_panel">Solar panels</string>
+    <string name="weather">Weather</string>
+    <string name="qwant_map" translatable="false">Qwant Maps</string>
+    <string name="recycle">Recycle</string>
+    <string name="reduce_waste">Reduce waste</string>
+    <string name="colorize">Colorize</string>
+    <string name="queer_map">Queer map</string>
+    <string name="water_map">Water Map</string>
+    <string name="ski_snow">Ski slope</string>
+    <string name="historic_places">Historic Places</string>
+    <string name="occitan" translatable="false">Occitan</string>
+    <string name="basque" translatable="false">Basque</string>
+    <string name="thematic_maps">Thematic maps</string>
+    <string name="billboard_advertises">Billboard advertises</string>
+    <string name="interior_buildings">Interior of buildings</string>
+    <string name="then_and_now">Then And Now</string>
+    <string name="hydrant">Hydrant</string>
+    <string name="whatever">Whatever</string>
+    <string name="infrastructure">Infrastructure</string>
+    <string name="mapcomplete">Complete maps</string>
+
+    <string name="occ_basq">Occitan et Basque</string>
+    <string name="basic_map">Basic map</string>
+    <string name="snow">Snow</string>
+    <string name="click_back_to_exit">Please click BACK again to exit</string>
+    <string name="about_vesrion">Release %1$s</string>
+    <string name="developer">Developer</string>
+    <string name="idea">Idea</string>
+    <string name="translators">Translators</string>
+    <string name="donations">Support with a donation</string>
+    <string name="issue_tracker">Issue tracker</string>
+    <string name="license">License</string>
+    <string name="source_code">Source code</string>
+    <string name="about_the_app">About the app</string>
+    <string name="maps">Maps</string>
+    <string name="about">About</string>
+    <string name="project">Project</string>
+    <string name="map">Map</string>
+    <string name="maintainer">Maintainer</string>
+    <string name="not_yet">Not yet</string>
+    <string name="unknown">Unknown</string>
+    <string name="action_language">Change language</string>
+    <string name="english" translatable="false">English</string>
+    <string name="open_menu">Open menu</string>
+    <string name="action_add_favorites">Add to favorites</string>
+</resources>
