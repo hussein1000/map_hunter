@@ -362,14 +362,8 @@ public class MainActivity extends AppCompatActivity {
             switch (position){
                 case 0:
                     List<PowerMenuItem> distances = new ArrayList<>();
-                    distances.add(new PowerMenuItem(getString(R.string.itinerary), false));
-                    distances.add(new PowerMenuItem(getString(R.string.cycle_paths), false));
-                    distances.add(new PowerMenuItem(getString(R.string.topographic), false));
-                    distances.add(new PowerMenuItem(getString(R.string.free_parkings), false));
-                    distances.add(new PowerMenuItem(getString(R.string.fuel), false));
-                    distances.add(new PowerMenuItem(getString(R.string.railway), false));
-                    distances.add(new PowerMenuItem(getString(R.string.benmaps), false));
-                    distances.add(new PowerMenuItem(getString(R.string.transit), false));
+                    distances.add(new PowerMenuItem(getString("Developer Profile"), false));
+                    distances.add(new PowerMenuItem(getString("Source Code"), false));
                     powerSubMenu = new PowerMenu.Builder(MainActivity.this)
                         .setHeaderView(R.layout.layout_dialog_header_trips)
                         .setFooterView(R.layout.layout_dialog_footer)

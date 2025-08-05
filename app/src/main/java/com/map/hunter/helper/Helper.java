@@ -92,71 +92,9 @@ public class Helper {
     public static String getTitle(Context context, String url) {
         String title = context.getString(R.string.app_name);
         if( url.contains(Helper.direction_map)){
-            title = context.getString(R.string.itinerary);
+            title = context.getString("Developer Profile");
         }else if( url.contains(Helper.cyclo_map)){
-            title = context.getString(R.string.cycle_paths);
-        }else if( url.contains(Helper.topo_map)){
-            title = context.getString(R.string.topographic);
-        }else if( url.contains(Helper.park_map)){
-            title = context.getString(R.string.free_parkings);
-        }else if( url.contains(Helper.fuel_map)){
-            title = context.getString(R.string.fuel);
-        }else if( url.contains(Helper.railway_map)){
-            title = context.getString(R.string.railway);
-        }else if( url.contains(Helper.ben_map) ){
-            title = context.getString(R.string.benmaps);
-        }else if( url.contains(Helper.travic_map) ){
-            title = context.getString(R.string.transit);
-        }else if( url.contains(Helper.wheel_map)){
-            title = context.getString(R.string.accessible_places);
-        }else if( url.contains(Helper.beer_map)){
-            title = context.getString(R.string.beer);
-        }else if( url.contains(Helper.solar_map)){
-            title = context.getString(R.string.solar_panel);
-        }else if( url.contains(Helper.weather_map)){
-            title = context.getString(R.string.weather);
-        }else if( url.contains(Helper.qwant_map)){
-            title = context.getString(R.string.qwant_map);
-        } else if (url.contains(Helper.openrecycle_map)) {
-            title = context.getString(R.string.recycle);
-        } else if (url.contains(Helper.queer_map)) {
-            title = context.getString(R.string.queer_map);
-        } else if (url.contains(Helper.water_map)) {
-            title = context.getString(R.string.water_map);
-        } else if (url.contains(Helper.snow_map)) {
-            title = context.getString(R.string.ski_snow);
-        } else if (url.contains(Helper.french_breweries)) {
-            title = context.getString(R.string.french_breweries);
-        } else if (url.contains(Helper.breton_map)) {
-            title = context.getString(R.string.breton);
-        } else if (url.contains(Helper.occitan_map)) {
-            title = context.getString(R.string.occitan);
-        } else if (url.contains(Helper.basque_map)) {
-            title = context.getString(R.string.basque);
-        } else if (url.contains(Helper.theme_contrib_map)) {
-            title = context.getString(R.string.thematic_maps);
-        }else if (url.contains(Helper.hydrant_contrib_map)) {
-            title = context.getString(R.string.hydrant);
-        }else if (url.contains(Helper.cartovrac_map)) {
-            title = context.getString(R.string.reduce_waste);
-        }else if (url.contains(Helper.gribrouillon)) {
-            title = context.getString(R.string.colorize);
-        } else if( url.contains(Helper.resto_map)){
-            title = context.getString(R.string.vegetarian_restaurants);
-        } else if( url.contains(Helper.historic_map)){
-            title = context.getString(R.string.historic_places);
-        }else if( url.contains(Helper.ads_warning_contrib_map)){
-            title = context.getString(R.string.billboard_advertises);
-        }else if( url.contains(Helper.them_an_now_contrib_map)){
-            title = context.getString(R.string.then_and_now);
-        }else if( url.contains(Helper.building_contrib_map)){
-            title = context.getString(R.string.interior_buildings);
-        }else if( url.contains(Helper.whatever_amp)){
-            title = context.getString(R.string.whatever);
-        }else if( url.contains(Helper.infra_map) ){
-            title = context.getString(R.string.infrastructure);
-        } else if( url.contains(Helper.complete_map)) {
-            title = context.getString(R.string.mapcomplete);
+            title = context.getString("Source Code");
         }
         return title;
     }
