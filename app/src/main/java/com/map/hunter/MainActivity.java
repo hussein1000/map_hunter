@@ -61,8 +61,8 @@ import java.util.Map;
 
 import com.map.hunter.databinding.ActivityMainBinding;
 import com.map.hunter.helper.Helper;
-import com.map.hunter.webview.OpenMapsWebChromeClient;
-import com.map.hunter.webview.OpenMapsWebViewClient;
+import com.map.hunter.webview.MapHunterWebChromeClient;
+import com.map.hunter.webview.MapHunterWebViewClient;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -90,9 +90,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(view);
 
         Helper.initializeWebview(MainActivity.this, binding.contentMain.mainWebview);
-        OpenMapsWebChromeClient openMapsWebChromeClient = new OpenMapsWebChromeClient(MainActivity.this, binding.contentMain.mainWebview, binding.contentMain.webviewContainer, binding.contentMain.videoLayout);
+        MapHunterWebChromeClient openMapsWebChromeClient = new MapHunterWebChromeClient(MainActivity.this, binding.contentMain.mainWebview, binding.contentMain.webviewContainer, binding.contentMain.videoLayout);
         binding.contentMain.mainWebview.setWebChromeClient(openMapsWebChromeClient);
-        binding.contentMain.mainWebview.setWebViewClient(new OpenMapsWebViewClient(MainActivity.this));
+        binding.contentMain.mainWebview.setWebViewClient(new MapHunterWebViewClient(MainActivity.this));
         SharedPreferences sharedpref = getSharedPreferences(Helper.APP_SHARED_PREF, MODE_PRIVATE);
         String mapTo_Load = sharedpref.getString(Helper.LAST_USED_MAP, Helper.base_contrib_map);
 
