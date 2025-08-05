@@ -27,7 +27,6 @@ public class AboutActivity extends AppCompatActivity {
         try {
             PackageInfo pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
             String version = pInfo.versionName;
-            binding.aboutVersion.setText(getResources().getString(R.string.about_vesrion, version));
         } catch (PackageManager.NameNotFoundException ignored) {}
 
         setTitle(R.string.about_the_app);

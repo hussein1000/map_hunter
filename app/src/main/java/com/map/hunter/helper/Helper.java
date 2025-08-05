@@ -66,7 +66,7 @@ public class Helper {
     private static final Pattern patternLon = Pattern.compile("lon=([+-]?([0-9]*[.])?[0-9]+)");
 
     public static String getTitle(Context context, String url) {
-        String title = context.getString(R.string.app_name);
+        String title = "Map Hunter";
         if (url.contains(direction_map)) {
             title = context.getString(R.string.itinerary);
         } else if (url.contains(cyclo_map)) {
@@ -101,15 +101,7 @@ public class Helper {
             title = context.getString(R.string.water_map);
         } else if (url.contains(snow_map)) {
             title = context.getString(R.string.ski_snow);
-        } else if (url.contains(french_breweries)) {
-            title = context.getString(R.string.french_breweries);
-        } else if (url.contains(breton_map)) {
-            title = context.getString(R.string.breton);
-        } else if (url.contains(occitan_map)) {
-            title = context.getString(R.string.occitan);
-        } else if (url.contains(basque_map)) {
-            title = context.getString(R.string.basque);
-        } else if (url.contains(cartovrac_map)) {
+        } else if  (url.contains(cartovrac_map)) {
             title = context.getString(R.string.reduce_waste);
         } else if (url.contains(gribrouillon)) {
             title = context.getString(R.string.colorize);
@@ -179,8 +171,8 @@ public class Helper {
         settings.setSupportMultipleWindows(false);
         settings.setGeolocationDatabasePath(context.getFilesDir().getPath());
         settings.setGeolocationEnabled(true);
-        settings.setAppCachePath(context.getCacheDir().getPath());
-        settings.setAppCacheEnabled(true);
+        webView.getSettings().setDatabaseEnabled(true);
+webView.getSettings().setDomStorageEnabled(true);
         settings.setDatabaseEnabled(true);
         settings.setDomStorageEnabled(true);
         settings.setCacheMode(WebSettings.LOAD_DEFAULT);
