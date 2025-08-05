@@ -64,4 +64,5 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.1")
     implementation("com.google.android.material:material:1.4.0")
     implementation("commons-io:commons-io:2.6")
+    implementation("com.github.franmontiel:LocaleChanger:0.9.2")
 }
