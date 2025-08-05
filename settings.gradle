@@ -1,2 +1,2 @@
-include ':app'
-rootProject.name='Map Hunter'
+rootProject.name = "Map Hunter"
+include(":app")
