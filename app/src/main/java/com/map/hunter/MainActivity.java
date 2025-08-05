@@ -275,7 +275,7 @@ public class MainActivity extends AppCompatActivity {
         super.attachBaseContext(newBase);
     }
 
-    private final OnMenuItemClickListener<PowerMenuItem> onMenuItemClickListener = new OnMenuItemClickListener<PowerMenuItem>() {
+/*    private final OnMenuItemClickListener<PowerMenuItem> onMenuItemClickListener = new OnMenuItemClickListener<PowerMenuItem>() {
         @Override
         public void onItemClick(int position, PowerMenuItem item) {
             SharedPreferences sharedpref = getSharedPreferences(Helper.APP_SHARED_PREF, MODE_PRIVATE);
@@ -295,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
             close.setOnClickListener(view -> powerSubMenu.dismiss());
 
         }
-    };
+    };*/
 
 
 
