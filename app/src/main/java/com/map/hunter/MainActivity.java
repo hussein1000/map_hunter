@@ -362,8 +362,14 @@ public class MainActivity extends AppCompatActivity {
             switch (position){
                 case 0:
                     List<PowerMenuItem> distances = new ArrayList<>();
-                    distances.add(new PowerMenuItem(getString("Developer Profile"), false));
-                    distances.add(new PowerMenuItem(getString("Source Code"), false));
+                    distances.add(new PowerMenuItem(getString(R.string.itinerary), false));
+                    distances.add(new PowerMenuItem(getString(R.string.cycle_paths), false));
+                    distances.add(new PowerMenuItem(getString(R.string.topographic), false));
+                    distances.add(new PowerMenuItem(getString(R.string.free_parkings), false));
+                    distances.add(new PowerMenuItem(getString(R.string.fuel), false));
+                    distances.add(new PowerMenuItem(getString(R.string.railway), false));
+                    distances.add(new PowerMenuItem(getString(R.string.benmaps), false));
+                    distances.add(new PowerMenuItem(getString(R.string.transit), false));
                     powerSubMenu = new PowerMenu.Builder(MainActivity.this)
                         .setHeaderView(R.layout.layout_dialog_header_trips)
                         .setFooterView(R.layout.layout_dialog_footer)
@@ -433,187 +439,6 @@ public class MainActivity extends AppCompatActivity {
                     powerSubMenu.showAtCenter(binding.contentMain.mainWebview);
                     break;
                 case 1:
-                    List<PowerMenuItem> lifeskills = new ArrayList<>();
-
-                    lifeskills.add(new PowerMenuItem(getString(R.string.vegetarian_restaurants), false));
-                    lifeskills.add(new PowerMenuItem(getString(R.string.accessible_places), false));
-                    lifeskills.add(new PowerMenuItem(getString(R.string.beer), false));
-                    lifeskills.add(new PowerMenuItem(getString(R.string.solar_panel), false));
-                    lifeskills.add(new PowerMenuItem(getString(R.string.weather), false));
-                    lifeskills.add(new PowerMenuItem(getString(R.string.qwant_map), false));
-                    lifeskills.add(new PowerMenuItem(getString(R.string.recycle), false));
-                    lifeskills.add(new PowerMenuItem(getString(R.string.reduce_waste), false));
-                    lifeskills.add(new PowerMenuItem(getString(R.string.colorize), false));
-                    lifeskills.add(new PowerMenuItem(getString(R.string.queer_map), false));
-                    lifeskills.add(new PowerMenuItem(getString(R.string.water_map), false));
-                    powerSubMenu = new PowerMenu.Builder(MainActivity.this)
-                            .setHeaderView(R.layout.layout_dialog_header_life_skills)
-                            .setFooterView(R.layout.layout_dialog_footer)
-                            .addItemList(lifeskills)
-                            .setAnimation(MenuAnimation.SHOW_UP_CENTER)
-                            .setWidth(700)
-                            .setTextSize(15)
-                            .setMenuRadius(10f)
-                            .setMenuShadow(10f)
-                            .setSelectedEffect(false)
-                            .setOnMenuItemClickListener((position12, item12) -> {
-                                switch (position12) {
-                                    case 1:
-                                        if( params.size() > 0 ) {
-                                            url = Helper.resto_map + "/#zoom="+ finalZoom +"&lat=" + params.get(1) + "&lon=" + params.get(0);
-                                        }
-                                        url = Helper.resto_map;
-                                        break;
-                                    case 2:
-                                        url = Helper.wheel_map;
-                                        if( params.size() > 0 ) {
-                                            url = Helper.wheel_map + "?zoom="+ finalZoom +"&lat=" + params.get(1) + "&lon=" + params.get(0);
-                                        }
-                                        break;
-                                    case 3:
-                                        url = Helper.beer_map;
-                                        if( params.size() > 0 ) {
-                                            url = Helper.beer_map + "/#"+ finalZoom +"/" + params.get(1) + "/" + params.get(0);
-                                        }
-                                        break;
-                                    case 4:
-                                        url = Helper.solar_map;
-                                        if( params.size() > 0 ) {
-                                            url += "/#"+ finalZoom +"/" + params.get(1) + "/" + params.get(0);
-                                        }
-                                        break;
-                                    case 5:
-                                        url = Helper.weather_map;
-                                        if( params.size() > 0 ) {
-                                            url = Helper.weather_map + "&zoom="+ finalZoom +"&lat=" + params.get(1) + "&lon=" + params.get(0);
-                                        }
-                                        break;
-                                    case 6:
-                                        url = Helper.qwant_map;
-                                        if( params.size() > 0 ) {
-                                            url = Helper.qwant_map + "/#map="+ finalZoom +"/" + params.get(1) + "/" + params.get(0);
-                                        }
-                                        break;
-                                    case 7:
-                                        url = Helper.openrecycle_map;
-                                        if (params.size() > 0) {
-                                            url = Helper.openrecycle_map + "/" + finalZoom + "/" + params.get(1) + "/" + params.get(0);
-                                        }
-                                        break;
-                                    case 8:
-                                        url = Helper.cartovrac_map;
-                                        break;
-                                    case 9:
-                                        url = Helper.gribrouillon;
-                                        if (params.size() > 0) {
-                                            url = Helper.gribrouillon + "/#" + finalZoom + "/" + params.get(1) + "/" + params.get(0);
-                                        }
-                                        break;
-                                    case 10:
-                                        url = Helper.queer_map;
-                                        break;
-                                    case 11:
-                                        url = Helper.water_map;
-                                        break;
-                                }
-                                if( url != null){
-                                    binding.contentMain.mainWebview.stopLoading();
-                                    fromMenu = true;
-                                    binding.contentMain.mainWebview.loadUrl(url);
-                                    editor.putString(Helper.LAST_USED_MAP, url);
-                                    editor.apply();
-                                }
-                                powerSubMenu.dismiss();
-                                powerMenu.dismiss();
-                            })
-                            .build();
-                    powerSubMenu.showAtCenter(binding.contentMain.mainWebview);
-                    break;
-                case 2:
-                    List<PowerMenuItem> hobbies = new ArrayList<>();
-                    hobbies.add(new PowerMenuItem(getString(R.string.ski_snow), false));
-                    hobbies.add(new PowerMenuItem(getString(R.string.historic_places), false));
-                    hobbies.add(new PowerMenuItem(getString(R.string.french_breweries), false));
-                    powerSubMenu = new PowerMenu.Builder(MainActivity.this)
-                            .setHeaderView(R.layout.layout_dialog_header_hobbies)
-                            .setFooterView(R.layout.layout_dialog_footer)
-                            .addItemList(hobbies)
-                            .setAnimation(MenuAnimation.SHOW_UP_CENTER)
-                            .setWidth(700)
-                            .setTextSize(15)
-                            .setMenuRadius(10f)
-                            .setMenuShadow(10f)
-                            .setSelectedEffect(false)
-                            .setOnMenuItemClickListener((position13, item13) -> {
-                                switch (position13) {
-                                    case 1:
-                                        url = Helper.snow_map;
-                                        break;
-                                    case 2:
-                                        url = Helper.historic_map;
-                                        if( params.size() > 0 ) {
-                                            url = Helper.historic_map + "/#"+ finalZoom +"/" + params.get(0) + "/" + params.get(1)+"/0";
-                                        }
-                                        break;
-                                    case 3:
-                                        url = Helper.french_breweries;
-                                        break;
-                                }
-                                if( url != null){
-                                    binding.contentMain.mainWebview.stopLoading();
-                                    fromMenu = true;
-                                    binding.contentMain.mainWebview.loadUrl(url);
-                                    editor.putString(Helper.LAST_USED_MAP, url);
-                                    editor.apply();
-                                }
-                                powerSubMenu.dismiss();
-                                powerMenu.dismiss();
-                            })
-                            .build();
-                    powerSubMenu.showAtCenter(binding.contentMain.mainWebview);
-                    break;
-                case 3:
-                    List<PowerMenuItem> regionals = new ArrayList<>();
-                    regionals.add(new PowerMenuItem(getString(R.string.breton), false));
-                    regionals.add(new PowerMenuItem(getString(R.string.occitan), false));
-                    regionals.add(new PowerMenuItem(getString(R.string.basque), false));
-                    powerSubMenu = new PowerMenu.Builder(MainActivity.this)
-                            .setHeaderView(R.layout.layout_dialog_header_regional_maps)
-                            .setFooterView(R.layout.layout_dialog_footer)
-                            .addItemList(regionals)
-                            .setAnimation(MenuAnimation.SHOW_UP_CENTER)
-                            .setWidth(700)
-                            .setTextSize(15)
-                            .setMenuRadius(10f)
-                            .setMenuShadow(10f)
-                            .setSelectedEffect(false)
-                            .setOnMenuItemClickListener((position14, item14) -> {
-                                switch (position14) {
-                                    case 1:
-                                        url = Helper.breton_map;
-                                        break;
-                                    case 2:
-                                        url = Helper.occitan_map;
-                                        break;
-                                    case 3:
-                                        url = Helper.basque_map;
-                                        break;
-                                }
-                                if( url != null){
-                                    binding.contentMain.mainWebview.stopLoading();
-                                    fromMenu = true;
-                                    binding.contentMain.mainWebview.loadUrl(url);
-                                    editor.putString(Helper.LAST_USED_MAP, url);
-                                    editor.apply();
-                                }
-                                powerSubMenu.dismiss();
-                                powerMenu.dismiss();
-
-                            })
-                            .build();
-                    powerSubMenu.showAtCenter(binding.contentMain.mainWebview);
-                    break;
-                case 4:
                     List<PowerMenuItem> contributions = new ArrayList<>();
                     contributions.add(new PowerMenuItem(getString(R.string.basic_map), true));
                     contributions.add(new PowerMenuItem(getString(R.string.thematic_maps), false));
