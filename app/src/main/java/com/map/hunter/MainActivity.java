@@ -408,12 +408,12 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences.Editor editor = sharedpref.edit();
             editor.putString(Helper.LAST_LOCATION,currentLocation.getLongitude() + "," + currentLocation.getLatitude()+","+currentLocation.getAltitude());
             editor.apply();
-            if (currentLocation != null) {
+/*            if (currentLocation != null) {
                 if( url.equals(Helper.ben_map)) {
                     String coord = "{\"app\":{\"mapCoords\":[" + currentLocation.getLongitude() + "," + currentLocation.getLatitude() + ",10]}}";
                     binding.contentMain.mainWebview.loadUrl("javascript:window.localStorage.setItem(\"persistedState\", '" + coord + "')");
                 }
-            }
+            }*/
         }
 
         @Override
