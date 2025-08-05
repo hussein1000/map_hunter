@@ -150,7 +150,7 @@ public class MapHunterWebViewClient extends WebViewClient {
             MainActivity.canGoBack = false;
         }
 
-        if( url.contains(Helper.ben_map)) {
+/*        if( url.contains(Helper.ben_map)) {
             if (activity instanceof MainActivity) {
                 Location currentLocation = ((MainActivity) activity).getCurrentLocation();
                 if (currentLocation != null) {
@@ -167,7 +167,7 @@ public class MapHunterWebViewClient extends WebViewClient {
                     }
                 }
             }
-        }
+        }*/
         if (activity instanceof MainActivity) {
             ((MainActivity) activity).showProgressDialog();
         }
