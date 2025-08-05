@@ -1,23 +1,24 @@
 plugins {
-    id 'com.android.application'
+    id("com.android.application")
 }
 
 android {
-    namespace 'com.map.hunter'
-    compileSdk 34
+    namespace = "com.map.hunter"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId "com.map.hunter"
-        minSdk 23
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables.useSupportLibrary = true
+        applicationId = "com.map.hunter"
+        minSdk = "23"
+        targetSdk = "36"
+        versionCode = "1"
+        versionName = "1.0"
+        vectorDrawables {
+            useSupportLibrary = true
+        }
     }
 
     buildFeatures {
-        viewBinding true
+        viewBinding = true
     }
 
     signingConfigs {
@@ -60,10 +61,5 @@ dependencies {
     implementation 'androidx.browser:browser:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
     implementation 'com.google.android.material:material:1.4.0'
-    testImplementation 'junit:junit:4.13.1'
-    androidTestImplementation 'androidx.test:runner:1.4.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    implementation "com.github.skydoves:powermenu:2.1.8"
     implementation 'commons-io:commons-io:2.6'
-    implementation 'com.github.franmontiel:LocaleChanger:0.9.2'
 }
