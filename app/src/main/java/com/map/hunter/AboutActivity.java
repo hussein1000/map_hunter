@@ -52,10 +52,4 @@ public class AboutActivity  extends AppCompatActivity {
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
     }
-
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        newBase = LocaleChanger.configureBaseContext(newBase);
-        super.attachBaseContext(newBase);
-    }
 }

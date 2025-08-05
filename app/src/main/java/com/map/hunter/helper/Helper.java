@@ -264,8 +264,6 @@ public class Helper {
         webView.getSettings().setSupportMultipleWindows(false);
         webView.getSettings().setGeolocationDatabasePath(context.getFilesDir().getPath() );
         webView.getSettings().setGeolocationEnabled(true);
-        webView.getSettings().setAppCachePath(context.getCacheDir().getPath());
-        webView.getSettings().setAppCacheEnabled(true);
         webView.getSettings().setDatabaseEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
