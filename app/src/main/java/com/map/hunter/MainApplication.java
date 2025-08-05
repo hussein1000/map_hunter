@@ -33,3 +33,4 @@ public class MainApplication extends Application {
         } catch (Exception ignored) { }
 
     }
+}
