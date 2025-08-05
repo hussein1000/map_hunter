@@ -13,13 +13,9 @@
         android:label="Map Hunter"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:usesCleartextTraffic="true"
-        android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="Map Hunter"
-            android:windowSoftInputMode="adjustPan"
-            android:configChanges="orientation|screenSize|layoutDirection|locale"
             android:theme="@style/AppTheme"
             android:exported="true">
             <intent-filter>
@@ -30,9 +26,6 @@
         </activity>
         <activity
             android:name=".AboutActivity"
-            android:label="Map Hunter"
-            android:configChanges="orientation|screenSize|layoutDirection|locale"
             android:theme="@style/AppTheme"/>
     </application>
-
 </manifest>
