@@ -213,69 +213,6 @@
                     android:text="https://framagit.org/tom79/openmaps"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
-
-            <!-- Support info -->
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/issue_tracker"
-                    />
-                <TextView
-                    android:layout_marginStart="5dp"
-                    android:id="@+id/issue_tracker"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:autoLink="web"
-                    android:text="https://framagit.org/tom79/openmaps/issues"
-                    tools:ignore="HardcodedText" />
-            </LinearLayout>
-
-            <!-- License info -->
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/license"
-                    />
-                <TextView
-                    android:layout_marginStart="5dp"
-                    android:id="@+id/license"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:text="GPL3"
-                    tools:ignore="HardcodedText" />
-            </LinearLayout>
-
-            <!-- About the Maps -->
-            <TextView
-                android:layout_margin="10dp"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/maps"
-                />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/list_of_contributors"
-                />
-
         </LinearLayout>
     </RelativeLayout>
 </androidx.core.widget.NestedScrollView>

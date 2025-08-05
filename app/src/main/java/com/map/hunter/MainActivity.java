@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
     private PowerMenu powerSubMenu;
     private PowerMenu powerMenuLanguage;
     final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
-    public static String TAG = "OpenMapsTAG";
+    public static String TAG = "MapHunterTAG";
     private String url = null;
     boolean doubleBackToExitPressedOnce = false;
     private Location currentLocation;
@@ -202,11 +202,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         List<PowerMenuItem> distances = new ArrayList<>();
-        distances.add(new PowerMenuItem(getString(R.string.trips), false));
-        distances.add(new PowerMenuItem(getString(R.string.life_skills), false));
-        distances.add(new PowerMenuItem(getString(R.string.hobbies), false));
-        distances.add(new PowerMenuItem(getString(R.string.regional_maps), false));
-        distances.add(new PowerMenuItem(getString(R.string.contributions), true));
         distances.add(new PowerMenuItem(getString(R.string.about), true));
         powerMenu = new PowerMenu.Builder(MainActivity.this)
                 .addItemList(distances)
@@ -280,16 +275,6 @@ public class MainActivity extends AppCompatActivity {
         }
         powerMenuLanguage = new PowerMenu.Builder(MainActivity.this)
                 .addItem(new PowerMenuItem(getString(R.string.english), defaultLocale.compareTo("en") == 0))
-                .addItem(new PowerMenuItem(getString(R.string.french), defaultLocale.compareTo("fr") == 0))
-                .addItem(new PowerMenuItem(getString(R.string.german), defaultLocale.compareTo("de") == 0))
-                .addItem(new PowerMenuItem(getString(R.string.basque_), defaultLocale.compareTo("eu") == 0))
-                .addItem(new PowerMenuItem(getString(R.string.occitan_), defaultLocale.compareTo("oc") == 0))
-                .addItem(new PowerMenuItem(getString(R.string.spanish), defaultLocale.compareTo("es") == 0))
-                .addItem(new PowerMenuItem(getString(R.string.portuguese), defaultLocale.compareTo("pt") == 0))
-                .addItem(new PowerMenuItem(getString(R.string.dutch), defaultLocale.compareTo("nl") == 0))
-                .addItem(new PowerMenuItem(getString(R.string.hungarian), defaultLocale.compareTo("hu") == 0))
-                .addItem(new PowerMenuItem(getString(R.string.swedish), defaultLocale.compareTo("sv") == 0))
-                .addItem(new PowerMenuItem(getString(R.string.traditional_chinese), defaultLocale.compareTo("zh-TW") == 0))
                 .setAnimation(MenuAnimation.SHOWUP_TOP_LEFT)
                 .setMenuRadius(10f)
                 .setMenuShadow(10f)
@@ -318,36 +303,6 @@ public class MainActivity extends AppCompatActivity {
             switch (position) {
                 case 0:
                     stringLocal = "en";
-                    break;
-                case 1:
-                    stringLocal = "fr";
-                    break;
-                case 2:
-                    stringLocal = "de";
-                    break;
-                case 3:
-                    stringLocal = "eu";
-                    break;
-                case 4:
-                    stringLocal = "oc";
-                    break;
-                case 5:
-                    stringLocal = "es";
-                    break;
-                case 6:
-                    stringLocal = "pt";
-                    break;
-                case 7:
-                    stringLocal = "nl";
-                    break;
-                case 8:
-                    stringLocal = "hu";
-                    break;
-                case 9:
-                    stringLocal = "sv";
-                    break;
-                case 10:
-                    stringLocal = "zh-TW";
                     break;
             }
             editor.putString(Helper.SET_DEFAULT_LOCALE_NEW, stringLocal);
