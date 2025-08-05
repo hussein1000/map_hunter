@@ -1,4 +1,18 @@
 package com.map.hunter;
+/* Copyright 2019 Thomas Schneider
+ *
+ * This file is a part of OpenMultiMaps
+ *
+ * This program is free software; you can redistribute it and/or modify it under the terms of the
+ * GNU General Public License as published by the Free Software Foundation; either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * OpenMultiMaps is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
+ * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+ * Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with OpenMultiMaps; if not,
+ * see <http://www.gnu.org/licenses>. */
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -47,8 +61,8 @@ import java.util.Map;
 
 import com.map.hunter.databinding.ActivityMainBinding;
 import com.map.hunter.helper.Helper;
-import com.map.hunter.webview.MapHunterWebChromeClient;
-import com.map.hunter.webview.MapHunterWebViewClient;
+import com.map.hunter.webview.OpenMapsWebChromeClient;
+import com.map.hunter.webview.OpenMapsWebViewClient;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
     private PowerMenu powerSubMenu;
     private PowerMenu powerMenuLanguage;
     final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
-    public static String TAG = "MapHunterTAG";
+    public static String TAG = "OpenMapsTAG";
     private String url = null;
     boolean doubleBackToExitPressedOnce = false;
     private Location currentLocation;
@@ -76,9 +90,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(view);
 
         Helper.initializeWebview(MainActivity.this, binding.contentMain.mainWebview);
-        MapHunterWebChromeClient MapHunterWebChromeClient = new MapHunterWebChromeClient(MainActivity.this, binding.contentMain.mainWebview, binding.contentMain.webviewContainer, binding.contentMain.videoLayout);
-        binding.contentMain.mainWebview.setWebChromeClient(MapHunterWebChromeClient);
-        binding.contentMain.mainWebview.setWebViewClient(new MapHunterWebViewClient(MainActivity.this));
+        OpenMapsWebChromeClient openMapsWebChromeClient = new OpenMapsWebChromeClient(MainActivity.this, binding.contentMain.mainWebview, binding.contentMain.webviewContainer, binding.contentMain.videoLayout);
+        binding.contentMain.mainWebview.setWebChromeClient(openMapsWebChromeClient);
+        binding.contentMain.mainWebview.setWebViewClient(new OpenMapsWebViewClient(MainActivity.this));
         SharedPreferences sharedpref = getSharedPreferences(Helper.APP_SHARED_PREF, MODE_PRIVATE);
         String mapTo_Load = sharedpref.getString(Helper.LAST_USED_MAP, Helper.base_contrib_map);
 
@@ -249,12 +263,51 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == android.R.id.home) {
             finish();
             return true;
+        } else if (item.getItemId() == R.id.action_language) {
+            createLanguageMenu(binding.mainLayout);
         } else if (item.getItemId() == R.id.action_about) {
             Intent intent = new Intent(MainActivity.this, AboutActivity.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public void createLanguageMenu(View action_language){
+        SharedPreferences sharedpref = getSharedPreferences(Helper.APP_SHARED_PREF, MODE_PRIVATE);
+        String defaultLocale = sharedpref.getString(Helper.SET_DEFAULT_LOCALE_NEW, Locale.getDefault().getLanguage());
+        if( defaultLocale == null) {
+            return;
+        }
+        powerMenuLanguage = new PowerMenu.Builder(MainActivity.this)
+                .addItem(new PowerMenuItem(getString(R.string.english), defaultLocale.compareTo("en") == 0))
+                .addItem(new PowerMenuItem(getString(R.string.french), defaultLocale.compareTo("fr") == 0))
+                .addItem(new PowerMenuItem(getString(R.string.german), defaultLocale.compareTo("de") == 0))
+                .addItem(new PowerMenuItem(getString(R.string.basque_), defaultLocale.compareTo("eu") == 0))
+                .addItem(new PowerMenuItem(getString(R.string.occitan_), defaultLocale.compareTo("oc") == 0))
+                .addItem(new PowerMenuItem(getString(R.string.spanish), defaultLocale.compareTo("es") == 0))
+                .addItem(new PowerMenuItem(getString(R.string.portuguese), defaultLocale.compareTo("pt") == 0))
+                .addItem(new PowerMenuItem(getString(R.string.dutch), defaultLocale.compareTo("nl") == 0))
+                .addItem(new PowerMenuItem(getString(R.string.hungarian), defaultLocale.compareTo("hu") == 0))
+                .addItem(new PowerMenuItem(getString(R.string.swedish), defaultLocale.compareTo("sv") == 0))
+                .addItem(new PowerMenuItem(getString(R.string.traditional_chinese), defaultLocale.compareTo("zh-TW") == 0))
+                .setAnimation(MenuAnimation.SHOWUP_TOP_LEFT)
+                .setMenuRadius(10f)
+                .setMenuShadow(10f)
+                .setTextColor(ContextCompat.getColor(MainActivity.this, R.color.black))
+                .setTextGravity(Gravity.CENTER)
+                .setSelectedTextColor(Color.WHITE)
+                .setMenuColor(Color.WHITE)
+                .setSelectedMenuColor(ContextCompat.getColor(MainActivity.this, R.color.colorPrimary))
+                .setOnMenuItemClickListener(onMenuLanguageListener)
+                .build();
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x;
+        int w = powerMenuLanguage.getContentViewWidth();
+        powerMenuLanguage.showAsAnchorRightTop(action_language,width-w, 0);
+    }
+
 
     private final OnMenuItemClickListener<PowerMenuItem> onMenuLanguageListener = new OnMenuItemClickListener<PowerMenuItem>() {
         @Override

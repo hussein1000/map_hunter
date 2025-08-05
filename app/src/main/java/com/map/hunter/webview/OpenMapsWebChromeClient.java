@@ -34,7 +34,7 @@ import com.map.hunter.MainActivity;
  * Custom WebChromeClient
  */
 
-public class MapHunterWebChromeClient extends WebChromeClient implements MediaPlayer.OnCompletionListener, MediaPlayer.OnErrorListener {
+public class OpenMapsWebChromeClient extends WebChromeClient implements MediaPlayer.OnCompletionListener, MediaPlayer.OnErrorListener {
 
     private FrameLayout videoViewContainer;
     private CustomViewCallback videoViewCallback;
@@ -52,7 +52,7 @@ public class MapHunterWebChromeClient extends WebChromeClient implements MediaPl
         void toggledFullscreen(boolean fullscreen);
     }
 
-    public MapHunterWebChromeClient(Activity activity, WebView webView, FrameLayout activityNonVideoView, ViewGroup activityVideoView) {
+    public OpenMapsWebChromeClient(Activity activity, WebView webView, FrameLayout activityNonVideoView, ViewGroup activityVideoView) {
         this.activity = activity;
         this.isVideoFullscreen = false;
         this.webView = webView;

@@ -53,12 +53,12 @@ import com.map.hunter.helper.Helper;
 
 import static android.content.Context.MODE_PRIVATE;
 
-public class MapHunterWebViewClient extends WebViewClient {
+public class OpenMapsWebViewClient extends WebViewClient {
 
     private final Activity activity;
     private final CoordinatorLayout rootView;
 
-    public MapHunterWebViewClient(Activity activity){
+    public OpenMapsWebViewClient(Activity activity){
         this.activity = activity;
         rootView = activity.findViewById(R.id.main_layout);
     }
