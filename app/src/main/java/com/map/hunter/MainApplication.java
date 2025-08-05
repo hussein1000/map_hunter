@@ -19,6 +19,12 @@ public class MainApplication extends Application {
             String defaultLocaleString = sharedpreferences.getString(Helper.SET_DEFAULT_LOCALE_NEW, null);
             if (defaultLocaleString != null) {
                 Locale defaultLocale;
+                if (defaultLocaleString.equals("zh-CN"))
+                    defaultLocale = Locale.SIMPLIFIED_CHINESE;
+                else if (defaultLocaleString.equals("zh-TW"))
+                    defaultLocale = Locale.TRADITIONAL_CHINESE;
+                else
+                    defaultLocale = new Locale(defaultLocaleString);
                 SUPPORTED_LOCALES.add(defaultLocale);
             } else {
                 SUPPORTED_LOCALES.add(Locale.getDefault());
