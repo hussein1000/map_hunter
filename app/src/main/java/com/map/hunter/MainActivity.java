@@ -225,14 +225,30 @@ public class MainActivity extends AppCompatActivity {
             permissionsAPI();
         }
 
-/*        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            WebView.setWebContentsDebuggingEnabled(true);
-        }*/
-
         if( getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+/*        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        } else if (item.getItemId() == R.id.action_language) {
+            createLanguageMenu(binding.mainLayout);
+        } else if (item.getItemId() == R.id.action_about) {*/
+        Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+        startActivity(intent);
+      //  }
+        return super.onOptionsItemSelected(item);
     }
 
     public void showProgressDialog(){
