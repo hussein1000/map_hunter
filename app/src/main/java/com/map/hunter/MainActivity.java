@@ -251,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        newBase = LocaleChanger.configureBaseContext(newBase);
+//        newBase = LocaleChanger.configureBaseContext(newBase);
         super.attachBaseContext(newBase);
     }
 
