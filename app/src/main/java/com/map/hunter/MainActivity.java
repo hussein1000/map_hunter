@@ -14,12 +14,12 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
-import com.franmontiel.localechanger.LocaleChanger;
+//import com.franmontiel.localechanger.LocaleChanger;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.skydoves.powermenu.MenuAnimation;
+/*import com.skydoves.powermenu.MenuAnimation;
 import com.skydoves.powermenu.OnMenuItemClickListener;
 import com.skydoves.powermenu.PowerMenu;
-import com.skydoves.powermenu.PowerMenuItem;
+import com.skydoves.powermenu.PowerMenuItem;*/
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -246,7 +246,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        LocaleChanger.onConfigurationChanged();
+//        LocaleChanger.onConfigurationChanged();
     }
 
     @Override
