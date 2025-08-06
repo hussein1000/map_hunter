@@ -37,10 +37,8 @@ android {
         }
     }
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-        compilerArgs += "-Xlint:deprecation"
+    kotlin {
+        jvmToolchain(17)
     }
 
     lint {
@@ -48,6 +46,10 @@ android {
         checkReleaseBuilds = false
         abortOnError = false
     }
+}
+
+tasks.withType<JavaCompile>().configureEach {
+    options.compilerArgs.add("-Xlint:deprecation")
 }
 
 repositories {
