@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="app/map_hunter.jpg" width="600" />
+  <img src="app/map_hunter.png" width="600" />
 </div>
 
 <h1 align="center">Map Hunter</h1>
