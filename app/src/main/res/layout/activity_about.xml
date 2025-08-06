@@ -79,12 +79,11 @@
                 <TextView
                     android:layout_marginStart="5dp"
                     android:id="@+id/source_code"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="3"
+                    android:gravity="center"
                     android:autoLink="web"
-                    android:text="https://github.com/hussein1000/map_hunter"
-                    tools:ignore="HardcodedText" />
+                    android:text="https://github.com/hussein1000/map_hunter" />
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
