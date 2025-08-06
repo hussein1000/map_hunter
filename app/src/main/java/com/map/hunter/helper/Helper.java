@@ -46,21 +46,6 @@ public class Helper {
     private static final Pattern patternLat =  Pattern.compile("lat=([+-]?([0-9]*[.])?[0-9]+)");
     private static final Pattern patternLon =  Pattern.compile("lon=([+-]?([0-9]*[.])?[0-9]+)");
 
-/*    public static ArrayList<Locale> SUPPORTED_LOCALES = new ArrayList<Locale>() {{
-        add(new Locale("en"));
-        add(new Locale("fr"));
-        add(new Locale("de"));
-        add(new Locale("eu"));
-        add(new Locale("oc"));
-        add(new Locale("es"));
-        add(new Locale("pt"));
-        add(new Locale("nl"));
-        add(new Locale("hu"));
-        add(new Locale("sv"));
-        add(new Locale("zh-TW"));
-    }};*/
-    
-
     public static void recordLocationFromUrl(Context context, String url){
         SharedPreferences sharedpref = context.getSharedPreferences(Helper.APP_SHARED_PREF, MODE_PRIVATE);
         if( url != null){
@@ -83,13 +68,8 @@ public class Helper {
             }else {
                 Matcher matcher = pattern1.matcher(url);
                 if( matcher.find()) {
-/*                    if( url.contains(historic_map)){
-                        lat = matcher.group(5);
-                        lon = matcher.group(3);
-                    }else{*/
                     lat = matcher.group(3);
                     lon = matcher.group(5);
-//                    }
                     zoom = matcher.group(2);
                 }else{
                     matcher = pattern2.matcher(url);
@@ -111,7 +91,6 @@ public class Helper {
 
     @SuppressLint("SetJavaScriptEnabled")
     public static void initializeWebview(Context context, WebView webView) {
-
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setUseWideViewPort(true);
         webView.getSettings().setLoadWithOverviewMode(true);
@@ -128,13 +107,7 @@ public class Helper {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             webView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE);
         }
-/*        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR2) {
-            webView.getSettings().setPluginState(WebSettings.PluginState.ON);
-        }*/
         webView.getSettings().setMediaPlaybackRequiresUserGesture(true);
-/*        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
-            webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
-        }*/
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             CookieManager cookieManager = CookieManager.getInstance();
             cookieManager.setAcceptThirdPartyCookies(webView, true);
@@ -143,34 +116,27 @@ public class Helper {
         webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
     }
 
-
-
     @SuppressWarnings({"unused", "RedundantSuppression"})
     public static void injectScriptFile(Activity activity, WebView view, String scriptFile) {
         InputStream input;
         try {
             input = activity.getAssets().open(scriptFile);
             byte[] buffer = new byte[input.available()];
-            //noinspection ResultOfMethodCallIgnored
             input.read(buffer);
             input.close();
 
-            // String-ify the script byte-array using BASE64 encoding !!!
             String encoded = Base64.encodeToString(buffer, Base64.NO_WRAP);
             view.loadUrl("javascript:(function() {" +
                     "var parent = document.getElementsByTagName('head').item(0);" +
                     "var script = document.createElement('script');" +
                     "script.type = 'text/javascript';" +
-                    // Tell the browser to BASE64-decode the string into your script !!!
                     "script.innerHTML = window.atob('" + encoded + "');" +
                     "parent.appendChild(script)" +
                     "})()");
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
-
 
     @SuppressWarnings({"ResultOfMethodCallIgnored", "unused", "RedundantSuppression"})
     public static void injectCSS(Activity activity, WebView view, String cssFile) {
@@ -184,7 +150,6 @@ public class Helper {
                     "var parent = document.getElementsByTagName('head').item(0);" +
                     "var style = document.createElement('style');" +
                     "style.type = 'text/css';" +
-                    // Tell the browser to BASE64-decode the string into your script !!!
                     "style.innerHTML = window.atob('" + encoded + "');" +
                     "parent.appendChild(style)" +
                     "})()");
@@ -192,7 +157,4 @@ public class Helper {
             e.printStackTrace();
         }
     }
-
-
-
 }
