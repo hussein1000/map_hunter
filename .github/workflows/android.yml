@@ -1,4 +1,4 @@
-name: Android Build
+name: Android App Build
 
 on:
   push:
@@ -29,7 +29,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v4.4.1
 
       - name: Build with gradle
-        run: ./gradlew assembleRelease --warning-mode=all
+        run: ./gradlew assembleRelease
 
       - name: Upload release apks
         uses: actions/upload-artifact@v4.6.2
