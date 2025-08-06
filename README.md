@@ -14,10 +14,10 @@ Map Hunter provides a powerful set of features in a clean and lightweight interf
 
 ## Features
 
-- 🗺️**Interactive Maps** – 
+- 🗺️ **Interactive Maps** – 
       Smooth zooming, panning, and multiple map layers.
-- 📍 **Real-Time Location Tracking** 
-      Instantly find your location and follow your movements.
+- 📍 **Location Tracking** 
+      Find your location and follow your movements.
 - 🧭 **Search & Navigation** 
       Search for places and get directions with route visualization.
 - 🔖 **Save Favorite Locations** 
@@ -30,5 +30,3 @@ Map Hunter provides a powerful set of features in a clean and lightweight interf
 🔍 Search: Use the search bar to find a place
 
 📍 Track Location: Tap the GPS icon to follow your current location
-
-➕ Bookmark: Long-press on the map to save a custom marker
