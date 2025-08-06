@@ -1,5 +1,8 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     id("com.android.application")
+    kotlin("android")
 }
 
 android {
@@ -47,14 +50,6 @@ android {
         checkReleaseBuilds = false
         abortOnError = false
     }
-}
-
-kotlin {
-    jvmToolchain(17)
-}
-
-tasks.withType<JavaCompile>().configureEach {
-    options.compileArgs.add("-Xlint:deprecation")
 }
 
 repositories {
