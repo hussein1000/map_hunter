@@ -30,7 +30,7 @@ public class Helper {
     public static String base_contrib_map = "https://www.openstreetmap.org";
 
     public static String getTitle(Context context, String url) {
-        String title = context.getString(R.string.app_name);
+        String title = "حسين صالح حسين الزين";
         return title;
     }
 
